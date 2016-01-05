@@ -35,6 +35,7 @@ public class Label extends AbstractComponent {
 	/**
 	 * Gets the text in the label.
 	 */
+	@Override
 	public String getText() {
 		return this.text;
 	}
@@ -44,22 +45,15 @@ public class Label extends AbstractComponent {
 	 * Calling this method results in the call to {@link #fireUpdate()}, 
 	 * which informs the component hierarchy to re-draw itself.
 	 */
+	@Override
 	public void setText(String text) {
 		this.text = text;
 		this.fireUpdate();
 	}
 
-	@Override
-	public void drawComponent(Graphics2D g) {
-		if(Configuration.getOS().contains("windows"))
-			this.drawForMSWindow(g);
-		else if(Configuration.getOS().contains("ubuntu"))
-			this.drawForUbuntu(g);
-		else
-			throw new UnsupportedOperationException("The GUI framework  does not yet support your operating system!");
-	}
 
-	private void drawForMSWindow(Graphics2D g) {
+	@Override
+	public void drawForMSWindow(Graphics2D g) {
 		Rectangle bound = this.getBounds();
 		
 		// Draw the title
@@ -68,7 +62,8 @@ public class Label extends AbstractComponent {
 		g.drawString(this.text, bound.x + H_SPACE, bound.y + 16);
 	}
 
-	private void drawForUbuntu(Graphics2D g) {
+	@Override
+	public void drawForUbuntu(Graphics2D g) {
 		Rectangle bound = this.getBounds();
 		
 		// Draw the title

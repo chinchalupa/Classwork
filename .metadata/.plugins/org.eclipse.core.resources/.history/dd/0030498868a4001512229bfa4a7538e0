@@ -1,0 +1,23 @@
+package problem;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+/**
+ * Created by wrightjt on 12/16/2015.
+ */
+public class Find_min extends MathOp {
+
+    public Find_min(String command, String application, ArrayList<String> params) {
+        super(command, application, params);
+    }
+
+    @Override
+    public String getResult() {
+        if(this.args.size() == 0) {
+            return "Found at index: " + String.valueOf(-1);
+        }
+        return "Found at index: " + String.valueOf(this.args.indexOf(Collections.min(this.args)));
+    }
+}

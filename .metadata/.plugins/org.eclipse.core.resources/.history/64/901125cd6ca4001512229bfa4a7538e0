@@ -1,0 +1,97 @@
+package problem;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class CommandRunner {
+
+	public static void main(String[] args) throws Exception {
+		
+		startCommand();
+		
+		
+	}
+	
+	public static void startCommand() throws Exception {
+		// read standard in
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		// prompt for input
+		System.out.print("GPFCLA>");
+
+		String line = "";
+		
+		String extension = "";
+		String command = "";
+
+		String pkg = "problem.";
+
+		// read user input for commands
+		while(!"quit".equals(line = in.readLine())) {
+			// parse out application name and command
+			if(line == null || line.length() == 0)
+				throw new FormatException("FORMAT ERROR: Empty command is not supported!");
+			
+			StringTokenizer tokenizer = new StringTokenizer(line);
+			if(tokenizer.hasMoreTokens())
+				extension = tokenizer.nextToken(" ");
+			else
+				throw new FormatException("FORMAT ERROR: Missing application name!");
+				
+			if(tokenizer.hasMoreTokens())
+				command = tokenizer.nextToken(" ");
+			else
+				throw new FormatException("FORMAT ERROR: Missing application command!");
+			
+			// break apart arguments
+			List<String> params = new ArrayList<String>();
+			while(tokenizer.hasMoreTokens()) {
+				params.add(tokenizer.nextToken(",").trim());
+			}
+
+			System.out.println("Executing App Extension: " + extension);
+
+			extension = extension.toLowerCase();
+
+			command = formatCommand(command);
+
+			StringBuffer buffer = getPrinted(pkg, command, extension, params);
+			System.out.println(buffer.toString());
+
+			// prompt for input
+			System.out.print("GPFCLA>");
+			}
+	}
+
+	public static String formatCommand(String command) {
+		command = Character.toUpperCase(command.charAt(0)) + command.substring(1);
+		command = command.replace("-", "");
+		return command;
+	}
+
+	public static StringBuffer getPrinted(String pkg, String command, String extension, List<String> params) throws Exception{
+		StringBuffer buffer = new StringBuffer();
+		System.out.println(pkg + " " + command);
+		buffer.append("---------------------------\n");
+		// Uses reflection to solve the problem
+		
+		buffer.append(getResult(pkg, command, extension, params) + "\n");
+		buffer.append("---------------------------\n");
+
+		return buffer;
+	}
+	
+	public static String getResult(String pkg, String command, String extension, ArrayList<String> params) throws Exception {
+		System.out.println(pkg + " | " + extension + " | " + command + " | " + params.toString());
+		Constructor<?> cons = Class.forName(pkg + command).getConstructor(String.class, String.class, ArrayList.class);
+		Extension ext = (Extension) cons.newInstance(extension, command, params);
+		System.out.println(ext.getResult());
+		return ext.getResult();
+	}
+}

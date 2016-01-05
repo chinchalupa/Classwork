@@ -13,7 +13,7 @@ import java.util.List;
  * 
  * @author Chandan R. Rupakheti (chandan.rupakheti@rose-hulman.edu)
  */
-public abstract class AbstractComponent implements IComponent {
+public abstract class AbstractComponent implements IComponent, Draw, Text {
 	private IComponent parent;
 	private List<IComponent> components;
 	private Rectangle bound;
@@ -91,5 +91,18 @@ public abstract class AbstractComponent implements IComponent {
 	}
 	
 	@Override
-	public abstract void drawComponent(Graphics2D g);
+	public void drawComponent(Graphics2D g) {
+		String os = System.getProperty("os.name").toLowerCase();
+
+		if(os.contains("windows")) {
+			drawForMSWindow(g);
+		}
+		else if(os.contains("ubuntu")) {
+			drawForUbuntu(g);
+		}
+	}
+
+	public abstract void drawForMSWindow(Graphics2D g);
+
+	public abstract void drawForUbuntu(Graphics2D g);
 }

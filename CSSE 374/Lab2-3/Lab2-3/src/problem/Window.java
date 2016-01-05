@@ -74,7 +74,18 @@ public class Window extends AbstractComponent {
 			throw new UnsupportedOperationException("The GUI framework  does not yet support your operating system!");
 	}
 
-	private void drawForMSWindow(Graphics2D g) {
+	@Override
+	public String getText() {
+		return title;
+	}
+
+	@Override
+	public void setText(String text) {
+		this.title = text;
+	}
+
+	@Override
+	public void drawForMSWindow(Graphics2D g) {
 		// Draw the border
 		g.setColor(Color.gray);
 		g.draw3DRect(1, 1, this.getBounds().width - H_SPACE, (int)this.getBounds().height - V_SPACE, true);
@@ -89,7 +100,8 @@ public class Window extends AbstractComponent {
 		g.drawString(this.title, 5, 17);
 	}
 
-	private void drawForUbuntu(Graphics2D g) {
+	@Override
+	public void drawForUbuntu(Graphics2D g) {
 		// Draw the border
 		g.setColor(new Color(48,0,0));
 		g.draw3DRect(1, 1, this.getBounds().width - H_SPACE, this.getBounds().height - V_SPACE, true);

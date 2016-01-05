@@ -1,0 +1,24 @@
+package problem;
+
+import static org.junit.Assert.*;
+
+/**
+ * Created by wrightjt on 12/16/2015.
+ */
+public class CommandRunnerTest {
+
+//    @org.junit.Before
+//    public void setUp() throws Exception {
+//
+//    }
+//
+//    @org.junit.After
+//    public void tearDown() throws Exception {
+//
+//    }
+
+    @org.junit.Test
+    public void testFormatCommand() throws Exception {
+        assertTrue(CommandRunner.formatCommand("numeric_ascending"), "Numericascending");
+    }
+}

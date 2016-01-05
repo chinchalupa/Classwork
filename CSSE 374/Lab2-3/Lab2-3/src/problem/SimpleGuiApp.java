@@ -13,7 +13,8 @@ public class SimpleGuiApp {
 		
 		
 		Window window = new Window("This is a Window", new Rectangle(200,200, 500, 500));
-		Label label = new Label(window, "This is a label", new Rectangle(5,30, 200, 25));
+		AbstractComponent label = new Label(window, "This is a label", new Rectangle(5,30, 200, 25));
+		AbstractComponent button = new Button(window, "BUTTON!", new Rectangle(5, 30, 200, 25));
 		window.show();
 		
 		for(int i = 10; i <= 100; i+=10) {
