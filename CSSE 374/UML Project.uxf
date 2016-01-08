@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>791</x>
+      <y>707</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>NodeMethod
+--
+- name : String
+- type : String
+- args : List&lt;String&gt;
+- security : String
+--
++ getName() : String
++ getReturnType() : String
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the
+INodeElement class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1141</x>
+      <y>707</y>
+      <w>175</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>InterfaceNode
+--
+- methods : List&lt;INodeElement&gt;
+--
++ getName()
++ getType()
++ getMethods() : List&lt;INodeElement&gt;
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the Node class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>385</x>
+      <y>497</y>
+      <w>98</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>IEdge
+--
+getTo() : String
+getFrom() : String
+getLine() : String
+getArrow() : String
+accepts() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>497</y>
+      <w>252</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;340.0;10.0;340.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>504</y>
+      <w>91</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>343</x>
+      <y>504</y>
+      <w>98</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>497</y>
+      <w>259</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>350.0;10.0;10.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>119</x>
+      <y>707</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>DotImplements
+--
+- to : String
+- from : String
+- arrow : String
+- line : String
+--
++ getTo() : String
++ getFrom() : String
++ getLine() : String
++ getArrow() : String
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the IEdge class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>707</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>DotExtends
+--
+- to : String
+- from : String
+- arrow : String
+- line : String
+--
++ getTo() : String
++ getFrom() : String
++ getLine() : String
++ getArrow() : String
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the IEdge class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>707</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>DotAssociates
+--
+- to : String
+- from : String
+- arrow : String
+- line : String
+--
++ getTo() : String
++ getFrom() : String
++ getLine() : String
++ getArrow() : String
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the IEdge class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>707</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>DotUses
+--
+- to : String
+- from : String
+- arrow : String
+- line : String
+--
++ getTo() : String
++ getFrom() : String
++ getLine() : String
++ getArrow() : String
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the IEdge class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>889</x>
+      <y>490</y>
+      <w>112</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>INodeElement
+--
+getName() : String
+getReturnType() : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>952</x>
+      <y>707</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>NodeField
+--
+- name : String
+- type : String
+--
++ getName() : String
++ getReturnType() : String
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the
+INodeElement class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>497</y>
+      <w>98</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>497</y>
+      <w>98</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0;120.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1330</x>
+      <y>707</y>
+      <w>168</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>ClassNode
+--
+- fields : List&lt;INodeElement&gt;
+- methods : List&lt;INodeElement&gt;
+--
++ getName() : String
++ getType() : String
++ getFields() : List&lt;INodeElement&gt;
++ getMethods() : List&lt;INodeElement&gt;
++ accept(visitor : IVisitor) : void
+--
+Responsibilities
+-- Realization of the Node class</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1232</x>
+      <y>497</y>
+      <w>105</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0;10.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1323</x>
+      <y>497</y>
+      <w>91</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;300.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1274</x>
+      <y>490</y>
+      <w>105</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>INode
+--
+getName() : String
+getType() : String
+getMethods() : String
+accept() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1106</x>
+      <y>238</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>OutputDotFile
+--
++ visitNodes(node : INode)
++ visitEdges(edge : IEdge)
+--
+Responsibilities
+-- Output a dot file</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>938</x>
+      <y>462</y>
+      <w>399</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;550.0;10.0;550.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1092</x>
+      <y>112</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>IVisitor
+--
+visitNodes()
+visitEdges()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1127</x>
+      <y>119</y>
+      <w>70</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>721</x>
+      <y>112</y>
+      <w>91</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ITraversable
+--
+accept(v : IVisitor)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>119</y>
+      <w>371</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>510.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>168</y>
+      <w>574</w>
+      <h>343</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;360.0;800.0;360.0;800.0;470.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>427</x>
+      <y>168</y>
+      <w>343</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>470.0;10.0;470.0;360.0;10.0;360.0;10.0;480.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>21</y>
+      <w>679</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;950.0;10.0;950.0;680.0;760.0;680.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>21</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>DesignParser
+--
+- main()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>35</y>
+      <w>343</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>470.0;120.0;470.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>49</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>21</y>
+      <w>322</w>
+      <h>497</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;690.0;10.0;10.0;440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1260</x>
+      <y>238</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>OutputSDEditFile
+--
++ visitNodes(node : INode)
++ visitEdges(edge : IEdge)
+--
+Responsibilities
+-- Output a dot file</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1127</x>
+      <y>112</y>
+      <w>224</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;10.0;300.0;180.0</additional_attributes>
+  </element>
+</diagram>
