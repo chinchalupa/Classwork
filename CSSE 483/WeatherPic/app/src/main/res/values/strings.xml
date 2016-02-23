@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WeatherPic</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="login_with_twitter">Login with Twitter</string>
+    <string name="action_sign_in">Login</string>
+    <string name="show_all">Show All</string>
+    <string name="logout">Logout</string>
+    <string name="twitter_app_key">nQ9nt0431Z9ODJyAW6KFZ931b</string>
+    <string name="twitter_app_secret">ElpbxcxTuqfu7xr8xDshxSjaZw3dDq7Q15FOn8nUSOhbED6xed</string>
+</resources>

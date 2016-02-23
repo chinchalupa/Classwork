@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Exam2</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_all">Add all</string>
+    <string name="shuffle">Shuffle</string>
+
+    <string name="title_activity_congrats">CongratsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="congratulations">Good job! You got them all with only %1$d hints!</string>
+    <string name="squares">Squares</string>
+    <string name="cubes">Cubes</string>
+    <string name="powers2">Powers of 2</string>
+    <string name="powers3">Powers of 3</string>
+    <string name="reset">reset</string>
+    <string name="no_more_equations">No more equations to add</string>
+    <string name="again">AGAIN</string>
+</resources>

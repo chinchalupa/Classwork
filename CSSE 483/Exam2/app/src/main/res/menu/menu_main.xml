@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.jeremy.exam2.MainActivity">
+
+    <item
+        android:id="@+id/add_all"
+        android:orderInCategory="1"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/add_all"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/shuffle"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_update_black_24dp"
+        android:title="@string/shuffle"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/reset_all"
+        android:orderInCategory="2"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/reset"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

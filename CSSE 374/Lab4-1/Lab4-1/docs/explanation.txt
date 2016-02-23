@@ -1,0 +1,1 @@
+A VirtualThread is created and the VirtualManager handles how the VirtualThreads are used. This allows you to only have to pass in VirtualThreads and the system will handle the rest.
